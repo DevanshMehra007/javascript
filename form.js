@@ -14,38 +14,77 @@ let sub=()=>{
     let errorpass=document.querySelector("#errorpass")
     let errorcpass=document.querySelector("#errorcpass")
 
-    if(inpname=="")
-    {
-        errorname.innerHTML="Please enter your name"
-        errorname.style.color="red"
+    if (inpname == "") {
+        let inpname=document.querySelector("#name")
+        inpname.placeholder="Please enter your name"
+        inpname.style.border="1px solid red"
+        errorname.innerHTML = "Please enter your name"
+        errorname.style.color = "red"
         return false;
     }
 
-    if(inpnum=="")
-        {
-            errornum.innerHTML="*Please enter your number"
-            errornum.style.color="red"
-            return false;
-        }
+    if (inpnum == "") {
+        errornum.innerHTML = "*Please enter your number"
+        errornum.style.color = "red"
+        return false;
+    }
 
-    if(inpmail=="")
-            {
-                errormail.innerHTML="*Please enter your email"
-                errormail.style.color="red"
-                return false;
-            }  
-            
-    if(inppass=="")
-            {
-                errorpass.innerHTML="*Please enter your password"
-                errorpass.style.color="red"
-                return false;
-            }
+    if (inpmail == "") {
+        errormail.innerHTML = "*Please enter your email"
+        errormail.style.color = "red"
+        return false;
+    }
 
-    if(inpcpass=="")
+    if (inppass == "") {
+        errorpass.innerHTML = "*Please enter your password"
+        errorpass.style.color = "red"
+        return false;
+    }
+
+    if (inpcpass == "") {
+        errorcpass.innerHTML = "*Confirm password"
+        errorcpass.style.color = "red"
+        return false;
+    }
+
+    if (inppass !== inpcpass) {
+        errorcpass.innerHTML = "*Confirm password is wrong"
+        errorcpass.style.color = "red"
+        document.querySelector("#Cpass").value=""
+        document.querySelector("#Cpass").focus()
+        return false;
+        
+    }
+    else if (isNaN(inpnum)) // If number than answer will be False
     {
-                errorcpass.innerHTML="*Confirm password"
-                errorcpass.style.color="red"
-                return false;
-        }        
+        errornum.innerHTML = "*Please Enter Number Only"
+        errornum.style.color = "red"
+        return false;
+    } 
+
+    else if (inpnum.length!==10)
+    {
+        errornum.innerHTML = "*Please Enter 10 Digit Number "
+        errornum.style.color = "red"
+        return false;
+        
+    }
+
+    else if(!(inpmail.includes('@') && inpmail.includes(".com")) )  {
+
+        errormail.innerHTML="*Please Enter valid Email"
+        errormail.style.color="red"
+        return false;
+
+    }
+
+    else if(!(inppass.match([/1234567890/]) && inppass.match([/!@#$%^&*/]) && inppass.match([/a-z/]) && inppass.match([/A-Z/] )))
+    {
+        errorpass.innerHTML="*Enter A Strong Password";
+        errorpass.style.color="red"
+        return false;
+    }
+        
+        
+       
 }

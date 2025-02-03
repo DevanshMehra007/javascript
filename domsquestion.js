@@ -15,15 +15,15 @@ let theme=()=>
 {
     
     
-    let dark=document.querySelector("#body")
-    if(document.body.style.backgroundColor=="white")
-    (
-        dark()
-            {
+    // let dark=document.querySelector("#body")
+    // if(document.body.style.backgroundColor=="white")
+    // (
+    //     dark()
+    //         {
             
-            }
+    //         }
 
-)
+//
     
 
 }
