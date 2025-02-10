@@ -91,11 +91,34 @@
     //     box1.style.backgroundColor="red"
     // })
 
-    let inpbox=document.querySelector("#inpbox")
+    // let inpbox=document.querySelector("#inpbox")
 
-    inpbox.addEventListener("input",()=>{
-        console.log(inpbox.value)
-    })
+    // inpbox.addEventListener("input",()=>{
+    //     console.log(inpbox.value)
+    // })
+
+    let form=()=>{
+        let inpname=document.querySelector("#name")
+        let inpnum=document.querySelector("#number")
+        let inpmail=document.querySelector("#email")
+        let inppass=document.querySelector("#pass")
+        let inpcpass=document.querySelector("Cpass")
+
+        let errorname=document.querySelector("errorname")
+        let errornum=document.querySelector("errornum")
+        let errormail=document.querySelector("errormail")
+        let errorpass=document.querySelector("errorpass")
+        let errorcpass=document.querySelector("errorcpass")
+
+        if(inpname=="")
+        {
+            errorname.innerHTML="*Please Enter Your Name"
+            errorname.style.color="red"
+            inpname.placeholder="Enter you name"
+
+            return false;
+        }
+    }
 
         
         
