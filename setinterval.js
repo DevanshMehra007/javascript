@@ -2,10 +2,11 @@ let count=0;
 let inter;
 
 let cout=()=>{
-   let num= document.querySelector("#count")
+    let show=document.querySelector("#show")
+   let num= document.querySelector("#count").value
     inter= setInterval(()=>{
-    num.innerHTML=count;
-    count++;
+    show.innerHTML=num;
+    num++;
    
     
 },1000)
