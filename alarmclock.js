@@ -36,11 +36,11 @@ let sett=()=>{
         }
 
 
-        setTimeout(()=>{
-             clearInterval(alarm)
-             show.innerHTML="Alarm is paused"
-             music.pause;
-        },5000)
+        // setTimeout(()=>{
+        //      clearInterval(alarm)
+        //      show.innerHTML="Alarm is paused"
+        //      music.pause;
+        // },5000)
 
     },1000)
 
