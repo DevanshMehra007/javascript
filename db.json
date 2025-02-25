@@ -1,0 +1,29 @@
+{
+
+    "Flight":[
+        {
+            "name":"dev",
+            "age": 25,
+            "Adhar":2321334,
+            "Mobileno":12312312,
+            "date":"01-10-25",
+            "destination":"Bhopal"
+        },{
+
+            "name":"ansh",
+            "age": 21,
+            "Adhar":232133423,
+            "Mobileno":12312312213,
+            "date":"01-11-25",
+            "destination":"Indore"
+        },{
+            
+            "name":"ika",
+            "age": 21,
+            "Adhar":2321331212423,
+            "Mobileno":123121221312213,
+            "date":"01-05-25",
+            "destination":"Indore"
+        }
+    ] 
+}
