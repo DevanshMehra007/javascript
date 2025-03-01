@@ -9,19 +9,29 @@ let fetchdata= async()=>{
 
 }
 
-let displayData=()=>{
-    let data=JSON.parse(data);
-    let finaldata='';
-    data.array.forEach( element => {
-        finaldata= `<tr><td>${element.name}</td>
-                    <td> ${element.age}</td>
-                    <td> ${element.Adhar}</td>
-                    <td>${element.Mobileno} </td>
-                    <td>${element.date} </td>
-                    <td>${element.destination} </td> </tr>`
-        
-        
-    });
+let Show=document.querySelector("#show")
+
+let fetchData= async ()=>{
+
+    data.map((e)=>{
+        Show.innerHTML+=
+        `
+        <tr>
+        <td> ${e.name}   </td>
+        <td> ${e.age}  </td>
+        <td> ${e.Adhar}   </td>
+        <td>${e.Mobileno}    </td>
+        <td> ${e.date}   </td>
+        <td> ${e.destination}   </td>
+        <td> ${e.person}   </td>
+        <td> ${e.price}   </td>
+        <td> ${e.price*e.person}   </td>
+
+        <td onclick="del('${e.id}')"> Cancel </td>
+        <td  onclick="formfill('${e.id}')" > Update </td>
+        </tr>      `
+    })
+}
 
 
     let formfill= async(id)=>{
@@ -41,4 +51,3 @@ let displayData=()=>{
         document.querySelector("#formdata").innerHTML=formdata
         
     }
-}

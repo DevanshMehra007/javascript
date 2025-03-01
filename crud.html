@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #show{
-            border: 2px solid black;
-        }
-    </style>
 </head>
-<body onload="fetchdata()">
-    <table>
-         <thead id="show" >
-             <tr>
+<body onload="fetchData()">
+    <table border="1" cellspacing="20px" cellpadding="10px">
+        <thead>
+            <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Adhar</th>
-                <th>Mobileno</th>
+                <th>Mobile</th>
                 <th>date</th>
                 <th>destination</th>
+                <th>person</th>
+                <th>price</th>
+                <th>total</th>
+                <th>cancel</th>
+                <th>update</th>
             </tr>
         </thead>
-       
+        <tbody id="show"></tbody>
     </table>
-    <script src="/crud.js"> </script>
+    <div id="formdata">
+
+    </div>
+    
+
+    <script src="/crud.js"></script>
+    <script src="/form.html"></script>
 </body>
 </html>
