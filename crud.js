@@ -94,11 +94,11 @@ let ins=()=>{
         let formdata =`
         
         
-        Enter Name : <input type ="text" id="upname=" value="${data.name}"   > <br> <br>
-        Enter Age : <input type ="number" id="upage=" value="${data.age}"    > <br> <br>
-        Enter Adharno : <input type ="number" id="upadhar=" value="${data.Adhar}"    > <br> <br>
-        Enter Mobile : <input type ="number" id="upnumber=" value="${data.Mobileno}"   >  <br> <br>
-        Enter Date : <input type ="date" id="update=" value="${data.date}"   > <br> <br> 
+        Enter Name : <input type ="text" id="upname=" value="${data.name}"> <br> <br>
+        Enter Age : <input type ="number" id="upage" value="${data.age}"> <br> <br>
+        Enter Adharno : <input type ="number" id="upadhar" value="${data.Adhar}"> <br> <br>
+        Enter Mobile : <input type ="number" id="upnumber" value="${data.Mobileno}">  <br> <br>
+        Enter Date : <input type ="date" id="update=" value="${data.date}"> <br> <br> 
             
             Destination : <select id="updestination"> 
             <option value="Bhopal">London</option>
@@ -110,7 +110,7 @@ let ins=()=>{
                
                Enter Person: <input type="number" id="upperson" value=" ${data.person}"> <br> <br>
                
-               <input type="submit" value="Update" onclick="return finalupdate(${data.id})
+               <input type="submit" value="Update" onclick="return finalupdate(${data.id})">
                
                ` 
 
